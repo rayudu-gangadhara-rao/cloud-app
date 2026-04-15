@@ -30,6 +30,13 @@ pipeline {
                 sh 'docker push $DOCKER_IMAGE:latest'
             }
         }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh '''
+                kubectl rollout restart deployment cloud-app
+                '''
+            }
+        }
     }
 }
-
