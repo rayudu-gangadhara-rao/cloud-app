@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t cloud-app .'
+                sh 'docker build --no-cache -t cloud-app .'
             }
         }
 
