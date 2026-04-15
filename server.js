@@ -1,7 +1,7 @@
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-  res.end("Change12345");
+  res.end("Resetting the data");
 });
 
 server.listen(3000, () => {
